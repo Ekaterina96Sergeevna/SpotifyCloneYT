@@ -41,7 +41,8 @@ object ServiceModule {
 
     @ServiceScoped
     @Provides
-    // source of our data so we will use
+    // this fun give us music source
+    // UserAgent - our app
     fun provideDataSourceFactory(
         @ApplicationContext context: Context
     ) = DefaultDataSourceFactory(context, Util.getUserAgent(context, "Spotify App"))
