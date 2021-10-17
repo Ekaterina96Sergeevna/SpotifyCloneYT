@@ -6,6 +6,7 @@ import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.audio.AudioAttributes
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
 import com.google.android.exoplayer2.util.Util
+import com.plcoding.spotifycloneyt.data.remote.MusicDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,6 +17,11 @@ import dagger.hilt.android.scopes.ServiceScoped
 @Module
 @InstallIn(ServiceComponent::class) // dependency inside ServiceModule live as long as ServiceComponent does
 object ServiceModule {
+
+    @ServiceScoped
+    @Provides
+    // allow dagger hilt to be able to inject this music database instance into FirebaseMusicSource class
+    fun provideMusicDatabase() = MusicDatabase()
 
 
     @ServiceScoped // we use it only in Service, not in our whole application
