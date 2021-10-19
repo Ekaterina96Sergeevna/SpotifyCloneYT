@@ -1,5 +1,6 @@
 package com.plcoding.spotifycloneyt.other
 
+// for error handling
 data class Resource<out T>(val status: Status, val data: T?, val message: String?) {
 
     companion object{
