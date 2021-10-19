@@ -76,7 +76,7 @@ class FirebaseMusicSource @Inject constructor(
             .build()
         MediaBrowserCompat.MediaItem(desc, FLAG_PLAYABLE)
         // FLAG_PLAYABLE - только воспроизводится song
-    }
+    }.toMutableList()
 
     // need check when the source or a music source - all of our songs finished downloading
     // in our service we often need an immediate result
