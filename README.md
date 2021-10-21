@@ -1,4 +1,4 @@
-# SpotifyCloneYT
+# SpotifyClone
 
 Приложение для воспроизведения музыкальных файлов из storage firebase.
 
